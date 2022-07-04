@@ -7,7 +7,6 @@ export const getUserOrders = async () => {
     const orders = await instance.get(`/order/by-nft`);
     userState.setUserOrders(orders.data);
   } catch (e) {
-    console.log(e);
     return Promise.reject(e);
   }
 };
